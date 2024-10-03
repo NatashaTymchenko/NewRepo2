@@ -10,30 +10,34 @@
 
 using namespace std;
 
-int main() {
-    {
-        int a = 10;
-        int b = 20;
-        int c = 30;
-        int d = 40;
+int main()
+{
+    float fltA = 36.7;
+    float fltB = 56.2;
+    int nC = 99;
+    int nD = 99;
 
-        // <УЛО1> (<УЛО2> (A<ОВ1>B) <БЛО> (<УЛО3> (C<ОВ2>D)))
-        //  empty (  !    (a == b)    ^   (   !   (c != d)))
-        bool res = (!(a == b) ^ (!(c != d)));
-        cout << "res: " << boolalpha << res << endl;
-    }
+    bool bRez1 = (fltA < fltB) ^ (!(nC != nD));
 
-    {
-        int a = 10;
-        int b = 20;
-        int c = 30;
-        int d = 40;
+    int nA = 86;
+    int nB = 65;
+    float fltC = 75.2;
+    float fltD = 43.6;
 
-        // <УЛО1> (<УЛО2> (A<ОВ1>B) <БЛО> (<УЛО3> (C<ОВ2>D)))
-        //  empty (  !    (a == b)    and   (   !   (c != d)))
-        bool res = (!(a == b) and (!(c != d)));
-        cout << "res: " << boolalpha << res << endl;
-    }
+    bool bRez2 = (nA < nB) ^ (!(fltC != fltD));
 
-    return 0;
+
+    const int CONSTA = 85;
+    int B = 27;
+    int R = 10 - 4;
+    int E = R;
+    int D = 1;
+
+    int C;
+    int* pC = &C;
+    *pC = -16;
+
+    bool bRez3 = (((CONSTA ^ ~B) + *pC) < D) * E << sizeof(short);
+
+
 }
