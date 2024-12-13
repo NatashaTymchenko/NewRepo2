@@ -40,14 +40,14 @@ bool isValidChain(const string& chain) {
 
 int main() {
     string chain;
-    cout << "Ââåä³òü ëàíöþæîê äëÿ ïåðåâ³ðêè: ";
+    cout << "Enter a string to verify: ";
     cin >> chain;
 
     if (isValidChain(chain)) {
-        cout << "Ëàíöþæîê â³äïîâ³äàº ôîðìàòó!" << endl;
+        cout << "The chain matches the format!" << endl;
     }
     else {
-        cout << "Ëàíöþæîê ÍÅ â³äïîâ³äàº ôîðìàòó!" << endl;
+        cout << "" << endl;
     }
 
     return 0;
